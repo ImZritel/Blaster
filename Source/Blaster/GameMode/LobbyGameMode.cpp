@@ -8,7 +8,7 @@ void ALobbyGameMode::PostLogin(APlayerController *NewPlayer){
     Super::PostLogin(NewPlayer);
 
     int32 NumberOfPlayers = GameState.Get()->PlayerArray.Num();
-    if (NumberOfPlayers == 2) {   //hardcoded
+    if (NumberOfPlayers == 3) {   //hardcoded
         UWorld* World = GetWorld();
         if (World) {
             bUseSeamlessTravel = true; // also check it in derived BP; transition map should exist and specified in project settings

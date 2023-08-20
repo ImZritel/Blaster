@@ -15,6 +15,7 @@ public:
 	ABlasterCharacter();
 	virtual void Tick(float DeltaTime) override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	FString GetPlayerName();
 
 protected:
 	virtual void BeginPlay() override;
@@ -30,4 +31,6 @@ private:
 	class USpringArmComponent* CameraBoom;
 	UPROPERTY(VisibleAnywhere, Category=Camera)
 	class UCameraComponent* FollowCamera;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
+	class UWidgetComponent* OverheadWidget;
 };
