@@ -32,6 +32,7 @@ void UOverheadWidget::ShowPlayerNetRole(APawn *InPawn){
             break;
     }
     FString LocalRoleString;
+    GetPlayerNameFromPawn(InPawn);
     LocalRoleString = FString::Printf(TEXT("%s \n Local role: %s"), *PlayerName_, *Role);
 
     SetDisplayText(LocalRoleString);
